@@ -21,5 +21,8 @@ public class Cookie : MonoBehaviour
 	{
 		transform.localScale = Vector3.one * 1.4f;
 		manager.Clicks++;
+
+
+
 	}
 }
