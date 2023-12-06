@@ -3,6 +3,7 @@ using UnityEngine;
 public class Cookie : MonoBehaviour
 {
 	public float shrinkSpeed;
+	public Vector3 rotateSpeed;
 	public GameManager manager;
 
 	void Update()
@@ -12,11 +13,16 @@ public class Cookie : MonoBehaviour
 		{
 			transform.localScale -= Vector3.one * shrinkSpeed * Time.deltaTime;
 		}
+
+		transform.Rotate(rotateSpeed * Time.deltaTime);
 	}
 
 	void OnMouseDown()
 	{
 		transform.localScale = Vector3.one * 1.4f;
-		manager.clicks++;
+		manager.Clicks++;
+
+
+
 	}
 }
